@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Литвинов](https://up.htmlacademy.ru/adaptive/16/user/563053).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Кравченко](https://htmlacademy.ru/profile/dreamoctober).
 
 ---
 
