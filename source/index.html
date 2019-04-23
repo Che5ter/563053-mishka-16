@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
-
+  <link href="css\style.css" rel="stylesheet" />
 </head>
 <body>
   <header class="page-header">
@@ -15,10 +15,10 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">Поиск</a>
@@ -32,73 +32,73 @@
   </header>
   <main class="main-content">
     <h1 class="visually-hidden">Онлайн магазин милых штук ручной работы "Мишка"</h1>
-    <section class="promo-selection">
-      <div class="promo-selection__wrapper">
-        <header class="promo-selection__header">
-          <ul class="promo-selection__list">
-            <li class="promo-selection__item">
+    <section class="promo">
+      <div class="promo__wrapper">
+        <header class="promo__header">
+          <ul class="promon__list">
+            <li class="promo__item">
               <a href="#">Новые поступления</a>
             </li>
-            <li class="promo-selection__item">
+            <li class="promo__item">
               <a href="#">Распродажа</a>
             </li>
-            <li class="promo-selection__item">
+            <li class="promo__item">
               <a href="#">Бесплатная доставка по России</a>
             </li>
           </ul>
         </header>
-        <h2 class="promo-selection__title">Милые штуки ручной работы для дома</h2>
-        <div class="promo-selection__block">
+        <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+        <div class="promo__block">
           <p>
             Предметы интерьера
           </p>
         </div>
-        <div class="promo-selection__block">
+        <div class="promo__block">
           <p>
             Детские игрушки
           </p>
         </div>
       </div>
     </section>
-    <section class="product-of-week">
-      <div class="product-of-week__wrapper">
-        <h2 class="product-of-week__title">Вязаные корзинки</h2>
+    <section class="special-offer">
+      <div class="special-offer__wrapper">
+        <h2 class="special-offer__title">Вязаные корзинки</h2>
         <p>
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.
         </p>
-        <table class="product-of-week__description">
+        <table class="special-offer__description">
           <tr>
-            <td class="product-of-week__color">
+            <td class="special-offer__color">
               Цвет:
             </td>
-            <td class="product-of-week__value">
+            <td class="special-offer__value">
               "Тиффани"/серый
             </td>
           </tr>
           <tr>
-            <td class="product-of-week__diameter">
+            <td class="special-offer__diameter">
               Диаметр:
             </td>
-            <td class="product-of-week__value">
+            <td class="special-offer__value">
               25 см
             </td>
           </tr>
           <tr>
-            <td class="product-of-week__height">
+            <td class="special-offer__height">
               Высота:
             </td>
-            <td class="product-of-week__value">
+            <td class="special-offer__value">
               15 см
             </td>
           </tr>
         </table>
-        <span class="product-of-week__price">
+        <span class="special-offer__price">
           Цена: 990 руб.
         </span>
-        <a class="product-of-week__order button" href="#">
+        <a class="special-offer__order button" href="#">
           Заказать
         </a>
-        <img class="product-of-week__product-picture" src="http://placehold.it/150x100">
+        <img class="special-offer__product-picture" src="http://placehold.it/150x100">
       </div>
     </section>
     <section class="about-us">
@@ -168,13 +168,13 @@
     <img class="page-footer__logo" src="" />
     <ul class="page-footer__list">
       <li class="page-footer__item">
-        Инстаграм
+        <a class="page-footer__link" href="#">Инстаграм</a>
       </li>
       <li class="page-footer__item">
-        Фейсбук
+        <a class="page-footer__link" href="#">Фейсбук</a>
       </li>
       <li class="page-footer__item">
-        Твиттер
+        <a class="page-footer__link" href="#">Твиттер</a>
       </li>
     </ul>
     <p class="page-footer__copyright">
