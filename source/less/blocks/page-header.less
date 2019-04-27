@@ -1,4 +1,39 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+
+.page-header__logo {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
   background-color: @font-colorw;
   color: @font-colorb;
+}
+
+.page-header__logo-image {
+  margin-bottom: auto;
+  margin-top: auto;
+  align-self: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    height: 88px;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 600px;
+  }
 }
