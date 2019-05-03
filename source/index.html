@@ -26,7 +26,7 @@
     <nav class="main-nav">
       <!--будущий бургер <button class="main-nav__toggle" type="button">Открыть меню</button> -->
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list left-nav">
+        <ul class="main-nav__list product-nav">
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -34,7 +34,7 @@
             <a class="main-nav__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-nav__list right-nav">
+        <ul class="main-nav__list action-nav">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#">Поиск</a>
           </li>
@@ -42,6 +42,17 @@
             <a class="main-nav__link" href="#">Корзина</a>
           </li>
         </ul>
+        <ul class="main-nav__list events-nav">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <span class="main-nav__delivery">
+          <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
+        </span>
       </div>
     </nav>
   </header>
@@ -49,19 +60,6 @@
     <h1 class="visually-hidden">Онлайн магазин милых штук ручной работы "Мишка"</h1>
     <section class="promo">
       <div class="promo__wrapper">
-        <header class="promo__header">
-          <ul class="promo__list">
-            <li class="promo__item">
-              <a class="promo__link" href="#">Новые поступления</a>
-            </li>
-            <li class="promo__item">
-              <a class="promo__link" href="#">Распродажа</a>
-            </li>
-            <li class="promo__item">
-              <a class="promo__link" href="#">Бесплатная доставка по России</a>
-            </li>
-          </ul>
-        </header>
         <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
         <div class="promo__container">
           <div class="promo__block">
@@ -75,43 +73,48 @@
     </section>
     <section class="special-offer">
       <div class="special-offer__wrapper">
-        <h2 class="special-offer__title">Вязаные корзинки</h2>
-        <p>
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.
-        </p>
-        <table class="special-offer__description">
-          <tr>
-            <td class="special-offer__color">
-              Цвет:
-            </td>
-            <td class="special-offer__value">
-              "Тиффани"/серый
-            </td>
-          </tr>
-          <tr>
-            <td class="special-offer__diameter">
-              Диаметр:
-            </td>
-            <td class="special-offer__value">
-              25 см
-            </td>
-          </tr>
-          <tr>
-            <td class="special-offer__height">
-              Высота:
-            </td>
-            <td class="special-offer__value">
-              15 см
-            </td>
-          </tr>
-        </table>
+        <div class="special-offer__header">
+          <h2 class="special-offer__title">Вязаные корзинки</h2>
+          <span class="special-offer__icon">Товар недели</span>
+        </div>
+        <div class="special-offer__description-all">
+          <p>
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.
+          </p>
+          <table class="special-offer__description">
+            <tr>
+              <td class="special-offer__color">
+                Цвет:
+              </td>
+              <td class="special-offer__value">
+                "Тиффани"/серый
+              </td>
+            </tr>
+            <tr>
+              <td class="special-offer__diameter">
+                Диаметр:
+              </td>
+              <td class="special-offer__value">
+                25 см
+              </td>
+            </tr>
+            <tr>
+              <td class="special-offer__height">
+                Высота:
+              </td>
+              <td class="special-offer__value">
+                15 см
+              </td>
+            </tr>
+          </table>
+        </div>
+        <img class="special-offer__product-picture" src="img/triple-set-mobile@1x.jpg">
         <span class="special-offer__price">
           Цена: 990 руб.
         </span>
         <a class="special-offer__order button" href="#">
           Заказать
         </a>
-        <img class="special-offer__product-picture" src="http://placehold.it/150x100">
       </div>
     </section>
     <section class="about-us">
@@ -120,31 +123,34 @@
           Коротко о нас
         </h2>
         <ul class="about-us__list">
-          <li class="about-us__item">
-            Экологически чистые материалы
-          </li>
-          <li class="about-us__item">
-            Скандинавский стиль по российской цене
-          </li>
-          <li class="about-us__item">
-            Увеличивает лайки на фотографиях
-          </li>
-          <li class="about-us__item">
-            Связано вручную с любовью и умилением
-          </li>
-          <li class="about-us__item">
-            Поддержка отечественного производителя
-          </li>
-          <li class="about-us__item">
-            Поставляется в подарочной упаковке
-          </li>
+          <ul class="about-us__list-left">
+            <li class="about-us__item">
+              Экологически чистые материалы
+            </li>
+            <li class="about-us__item">
+              Скандинавский стиль по российской цене
+            </li>
+            <li class="about-us__item">
+              Увеличивает лайки на фотографиях
+            </li>
+          </ul>
+          <ul class="about-us__list-right">
+            <li class="about-us__item">
+              Связано вручную с любовью и умилением
+            </li>
+            <li class="about-us__item">
+              Поддержка отечественного производителя
+            </li>
+            <li class="about-us__item">
+              Поставляется в подарочной упаковке
+            </li>
+          </ul>
         </ul>
       </div>
     </section>
     <section class="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
-        <a class="reviews__write button" href="#">Написать</a>
         <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
           В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
         </p>
@@ -154,27 +160,32 @@
         <p class="reviews__login">
           @misssssiskras
         </p>
-        <button class="reviews__prev" type="button"></button>
-        <button class="reviews__next" type="button"></button>
+        <div class="reviews__buttons">
+          <button class="reviews__prev" type="button"></button>
+          <button class="reviews__next" type="button"></button>
+        </div>
+        <a class="reviews__write button" href="#">Написать</a>
       </div>
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
-        <p>
-          e-mail:
-        </p>
-        <a class="reviews__email">info@mimimishkashop.ru</a>
-        <p>
-          адрес:
-        </p>
-        <span class="reviews__adress">г. Санкт-Петербург,<br/>
-          ул. Большая Конюшенная, <br/>
-          д. 19/8, офис 101
-        </span>
-        <a class="reviews__write button" href="#">Напишите нам</a>
-        <img class="reviews__map" src="http://placehold.it/150x100">
+        <div class="contacts__all-info">
+          <div class="contacts__email-block">
+            <span>e-mail:</span>
+            <a class="contacts__email">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts__adress-block">
+            <span>адрес:</span>
+            <span class="contacts__adress">г. Санкт-Петербург,<br/>
+              ул. Большая Конюшенная, <br/>
+              д. 19/8, офис 101
+            </span>
+          </div>
+        </div>
       </div>
+      <img class="contacts__map" src="img\map-mobile@1x.jpg">
+      <a class="contacts__write button" href="#">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">

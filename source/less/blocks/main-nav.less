@@ -23,6 +23,11 @@
   color: @font-colorb;
 }
 
+.events-nav,
+.main-nav__delivery {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
@@ -44,6 +49,23 @@
 
   .main-nav__item {
     margin-right: 10px;
+  }
+
+  .product-nav {
+    order: 2;
+  }
+
+  .action-nav {
+    order: 1;
+  }
+
+  .main-nav__delivery {
+    display: flex;
+    order: 3;
+  }
+
+  .events-nav {
+    display: none;
   }
 }
 

@@ -2,3 +2,42 @@
   background-color: @font-colorw;
   color: @font-colorb;
 }
+
+.about-us__wrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+  min-width: 260px;
+}
+
+.about-us__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-us__list-left,
+.about-us__list-right {
+  margin: inherit;
+  padding: inherit;
+  list-style: inherit;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__list {
+    min-width: 668px;
+    flex-direction: row;
+  }
+
+  .about-us__wrapper {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__wrapper {
+    padding-left: 175px;
+    padding-right: 50px;
+  }
+}

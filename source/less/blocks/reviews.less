@@ -2,3 +2,35 @@
   background-color: @font-colorw;
   color: @font-colorb;
 }
+
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 30px;
+  min-width: 260px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    padding: 0 50px;
+  }
+  .reviews__write {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+  }
+  .reviews__buttons {
+    position: absolute;
+    right: 50px;
+    bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__wrapper {
+    padding-left: 175px;
+    padding-right: 50px;
+  }
+}
