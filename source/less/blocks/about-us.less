@@ -1,6 +1,7 @@
 .about-us {
   background-color: @font-colorw;
   color: @font-colorb;
+  margin-bottom: 85px;
 }
 
 .about-us__wrapper {
@@ -17,11 +18,21 @@
   list-style: none;
 }
 
+.about-us__title {
+  font-size: 43px;
+  line-height: 50px;
+  padding-top: 35px;
+}
+
 .about-us__list-left,
 .about-us__list-right {
   margin: inherit;
   padding: inherit;
   list-style: inherit;
+}
+
+.about-us__item {
+  padding-top: 90px;
 }
 
 @media (min-width: @tablet-width) {
@@ -31,7 +42,17 @@
   }
 
   .about-us__wrapper {
+    min-width: 668px;
     padding: 0 50px;
+  }
+
+  .about-us__list-left,
+  .about-us__list-right {
+    width: 50%;
+  }
+
+  .about-us__item {
+    padding-right: 98px
   }
 }
 

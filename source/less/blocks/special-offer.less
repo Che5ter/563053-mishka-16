@@ -1,6 +1,15 @@
 .special-offer {
+  position: relative;
   background-color: @font-colorw;
   color: @font-colorb;
+  &::after {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 100%;
+    background: url("../../img/bg-zigzag-line.svg") no-repeat;
+    background-size: 100% 8px;
+  }
 }
 
 .special-offer__wrapper {
@@ -15,7 +24,51 @@
 .special-offer__description-all {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  font-weight: normal;
+}
+
+.special-offer__title {
+  padding-top: 33px;
+}
+
+.special-offer__icon {
+  color: #63d1bb;
+}
+
+.special-offer__price {
+  text-align: center;
+  padding-top: 29px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #444;
+  font-weight: bold;
+}
+
+.special-offer__order {
+  width: 100%;
+  margin-top: 29px;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+.special-offer__description {
+  margin-top: 55px;
+  font-size: 15px;
+  line-height: 20px;
+  border-collapse: collapse;
+}
+
+.special-offer__description tr {
+  border-bottom: 1px solid #ececec;
+}
+
+.special-offer__description td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.special-offer__product-picture {
+  margin-top: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,9 +78,33 @@
     padding-left: 50px;
   }
 
+  .special-offer__header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 55px;
+  }
+
+  .special-offer__icon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: 28px;
+    font-size: 17px;
+    line-height: 17px;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .special-offer__description-all {
     display: flex;
     flex-direction: column;
+    width: 50%;
+  }
+
+  .special-offer__description-all p {
+    margin-top: 55px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .special-offer__description-block {
@@ -35,9 +112,15 @@
     flex-direction: column;
   }
 
+  .special-offer__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 0;
+  }
+
   .special-offer__product-picture {
     position: absolute;
-    top: 50px;
+    top: 175px;
     right: 50px;
   }
 }

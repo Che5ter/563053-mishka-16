@@ -15,9 +15,48 @@
   list-style: none;
 }
 
+.footer-social {
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 28px;
+}
+
+.footer-copyright {
+  margin: 30px auto;
+}
+
+.page-footer__link {
+  display: block;
+  &--instagram {
+    width: 22px;
+    height: 21px;
+  }
+  &--twitter {
+    width: 23px;
+    height: 20px;
+  }
+  &--fb {
+    width: 15px;
+    height: 28px;
+  }
+  &--academy {
+    width: 27px;
+    height: 34px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-top: 28px;
   }
 }
