@@ -1,5 +1,10 @@
 .center-column {
-  align-self: center;
   margin-bottom: auto;
   margin-top: auto;
+}
+
+.pseudo-element(@content: "", @position: absolute, @display: block) {
+content: @content;
+position: @position;
+display: @display;
 }

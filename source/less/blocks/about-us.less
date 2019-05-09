@@ -32,7 +32,62 @@
 }
 
 .about-us__item {
+  position: relative;
   padding-top: 90px;
+
+  &--flower::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 32px;
+    height: 37px;
+    background: url("../img/icon-feature-flower.svg") no-repeat;
+  }
+
+  &--money::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 47px;
+    height: 27px;
+    background: url("../img/icon-feature-money.svg") no-repeat;
+  }
+
+  &--heart::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 34px;
+    height: 27px;
+    background: url("../img/icon-feature-heart.svg") no-repeat;
+  }
+
+  &--ball::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 35px;
+    height: 34px;
+    background: url("../img/icon-feature-ball.svg") no-repeat;
+  }
+
+  &--rocket::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 55px;
+    height: 23px;
+    background: url("../img/icon-feature-rocket.svg") no-repeat;
+  }
+
+  &--gift::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 33px;
+    height: 32px;
+    background: url("../img/icon-feature-gift.svg") no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -24,7 +24,9 @@
       </svg>
     </a>
     <nav class="main-nav">
-      <!--будущий бургер <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list product-nav">
           <li class="main-nav__item">
@@ -35,11 +37,11 @@
           </li>
         </ul>
         <ul class="main-nav__list action-nav">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Поиск</a>
+          <li class="main-nav__item  main-nav__item--search">
+            <a class="main-nav__link" href="#">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Корзина</a>
+          <li class="main-nav__item main-nav__item--basket">
+            <a class="main-nav__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
         <ul class="main-nav__list events-nav">
@@ -83,26 +85,26 @@
           </p>
           <table class="special-offer__description">
             <tr>
-              <td class="special-offer__color">
+              <td class="special-offer__key">
                 Цвет:
               </td>
-              <td class="special-offer__value">
+              <td class="special-offer__key">
                 "Тиффани"/серый
               </td>
             </tr>
             <tr>
-              <td class="special-offer__diameter">
+              <td class="special-offer__key">
                 Диаметр:
               </td>
-              <td class="special-offer__value">
+              <td class="special-offer__key">
                 25 см
               </td>
             </tr>
             <tr>
-              <td class="special-offer__height">
+              <td class="special-offer__key">
                 Высота:
               </td>
-              <td class="special-offer__value">
+              <td class="special-offer__key">
                 15 см
               </td>
             </tr>
@@ -124,24 +126,24 @@
         </h2>
         <ul class="about-us__list">
           <ul class="about-us__list-left">
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--flower">
               Экологически чистые материалы
             </li>
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--money">
               Скандинавский стиль по российской цене
             </li>
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--heart">
               Увеличивает лайки на фотографиях
             </li>
           </ul>
           <ul class="about-us__list-right">
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--ball">
               Связано вручную с любовью и умилением
             </li>
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--rocket">
               Поддержка отечественного производителя
             </li>
-            <li class="about-us__item">
+            <li class="about-us__item about-us__item--gift">
               Поставляется в подарочной упаковке
             </li>
           </ul>
