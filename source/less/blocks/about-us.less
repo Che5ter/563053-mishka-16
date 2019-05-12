@@ -10,7 +10,8 @@
   min-width: 260px;
 }
 
-.about-us__list {
+.features__main-list,
+.features__secondary-list {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -24,14 +25,7 @@
   padding-top: 35px;
 }
 
-.about-us__list-left,
-.about-us__list-right {
-  margin: inherit;
-  padding: inherit;
-  list-style: inherit;
-}
-
-.about-us__item {
+.features__item {
   position: relative;
   padding-top: 90px;
 
@@ -91,9 +85,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .about-us__list {
-    min-width: 668px;
+  .about-us__features {
+    display: flex;
     flex-direction: row;
+    min-width: 668px;
   }
 
   .about-us__wrapper {
@@ -101,12 +96,12 @@
     padding: 0 50px;
   }
 
-  .about-us__list-left,
-  .about-us__list-right {
+  .features__main-list,
+  .features__secondary-list {
     width: 50%;
   }
 
-  .about-us__item {
+  .features__item {
     padding-right: 98px;
   }
 }

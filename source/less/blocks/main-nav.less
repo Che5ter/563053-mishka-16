@@ -36,7 +36,6 @@
     top: 31px;
     background: url("../img/icon-cart.svg") no-repeat;
   }
-
 }
 
 .main-nav__link {
@@ -68,6 +67,24 @@
   background: url("../img/icon-menu-open.svg") no-repeat;
 }
 
+.main-nav__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  background-color: @font-colorw;
+  color: @font-colorb;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav__logo-image {
+  margin-bottom: auto;
+  margin-top: auto;
+  align-self: center;
+}
+
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .product-nav {
     display: none;
@@ -86,9 +103,13 @@
   .main-nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-left: auto;
-    margin-right: 50px;
-    min-height: 88px;
+  }
+
+  .main-nav__logo {
+    min-width: 370px;
+    border: none;
   }
 
   .main-nav__list {
@@ -99,14 +120,25 @@
   .main-nav__wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .main-nav__item {
     margin-right: 10px;
+    border: none;
+    border-left: 1px solid #ececec;
+  }
+
+  .product-nav li {
+    padding: 0;
+    border: none;
   }
 
   .product-nav {
+    width: 334px;
     order: 2;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .action-nav {
@@ -116,25 +148,63 @@
   .main-nav__delivery {
     display: flex;
     order: 3;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
   }
 
   .events-nav {
     display: none;
   }
+
+  .main-nav__item--search {
+    padding: 0;
+    padding-right: 70px;
+  }
+
+  .main-nav__item--search a {
+    font-size: 0;
+    padding: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav__wrapper {
-    width: 1050px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
   .main-nav {
     margin-left: 0;
   }
 
-  .right-nav {
+  .main-nav__logo {
+    position: absolute;
+    left: 333px;
+  }
+
+  .product-nav {
+    order: 1;
+    font-size: 17px;
+  }
+
+  .product-nav li:first-child {
+    border-right: 1px solid #efefef;
+  }
+
+  .action-nav {
+    order: 2;
     margin-left: auto;
+    font-size: 17px;
+  }
+
+  .events-nav {
+    display: flex;
+    order: 3;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .events-nav li {
+    border: none;
   }
 }
