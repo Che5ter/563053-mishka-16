@@ -12,22 +12,23 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .promo__title {
   font-size: 27px;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 90px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .promo__item {
-  color: @font-colorw;
   padding-left: 30px;
   padding-right: 186px;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 23px;
+  padding-bottom: 24px;
   font-size: 19px;
   line-height: 24px;
 
@@ -50,21 +51,33 @@
 
 .promo__link {
   text-decoration: none;
-  color: @font-colorb;
+  color: @font-colorw;
 }
 
 
 @media (min-width: @tablet-width) {
   .promo {
+    position: relative;
     background: url("../img/hero-tablet@1x.jpg") no-repeat;
     background-position: center 0;
     height: 745px;
     margin-top: -80px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 100%;
+      background: url("../img/bg-zigzag-fill.svg") no-repeat;
+      background-size: 100% auto;
+      bottom: 0px;
+    }
   }
 
   .promo__wrapper {
     height: 100%;
     min-width: 668px;
+    max-width: 768px;
     margin: 0 auto;
     padding-left: 50px;
     padding-right: 50px;
@@ -79,11 +92,13 @@
   .promo__title {
     font-size: 43px;
     line-height: 50px;
-    padding-top: 125px;
+    padding-top: 153px;
   }
 
   .promo__item {
     width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   .promo__list {
@@ -110,5 +125,10 @@
 
   .promo__list {
     min-width: 1050px;
+  }
+
+  .promo__item {
+    padding-top: 35px;
+    padding-bottom: 40px;
   }
 }
