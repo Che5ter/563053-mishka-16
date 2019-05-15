@@ -2,3 +2,132 @@
   background-color: @font-colorw;
   color: @font-colorb;
 }
+
+.about-us__wrapper {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 320px;
+  min-width: 260px;
+}
+
+.features__main-list,
+.features__secondary-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-us__title {
+  font-size: 25px;
+  line-height: 30px;
+  padding-top: 35px;
+}
+
+.features__item {
+  position: relative;
+  padding-top: 90px;
+
+  &--flower::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 32px;
+    height: 37px;
+    background: url("../img/icon-feature-flower.svg") no-repeat;
+  }
+
+  &--money::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 47px;
+    height: 27px;
+    background: url("../img/icon-feature-money.svg") no-repeat;
+  }
+
+  &--heart::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 34px;
+    height: 27px;
+    background: url("../img/icon-feature-heart.svg") no-repeat;
+  }
+
+  &--ball::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 35px;
+    height: 34px;
+    background: url("../img/icon-feature-ball.svg") no-repeat;
+  }
+
+  &--rocket::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 55px;
+    height: 23px;
+    background: url("../img/icon-feature-rocket.svg") no-repeat;
+  }
+
+  &--gift::before {
+    .pseudo-element();
+    top: 31px;
+    left: 14px;
+    width: 33px;
+    height: 32px;
+    background: url("../img/icon-feature-gift.svg") no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__features {
+    display: flex;
+    flex-direction: row;
+    min-width: 668px;
+    margin-bottom: 85px;
+  }
+
+  .about-us__wrapper {
+    max-width: 768px;
+    min-width: 668px;
+    padding: 0 50px;
+  }
+
+  .features__main-list,
+  .features__secondary-list {
+    width: 50%;
+  }
+
+  .features__item {
+    padding-right: 98px;
+  }
+
+  .about-us__title {
+    padding-top: 55px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-left: 175px;
+    padding-right: 50px;
+  }
+
+  .about-us__title {
+    font-size: @h2-desktop-size;
+    line-height: @h2-desktop-height;
+  }
+
+  .features__item {
+    padding-right: 49%;
+  }
+}
