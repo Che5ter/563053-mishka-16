@@ -5,6 +5,7 @@
 }
 
 .catalog__wrapper {
+  max-width: 320px;
   padding: 0 30px;
   margin: 0 auto;
 }
@@ -13,4 +14,138 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ededed;
+}
+
+.catalog__description,
+.catalog__price {
+  padding-left: 28px;
+}
+
+.catalog__title {
+  padding-top: 30px;
+  .font-size-height (17px; 24px);
+}
+
+.catalog__description p {
+  .font-size-height (13px; 30px);
+  font-weight: normal;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 25px;
+  margin-right: 25px;
+}
+
+.catalog__price {
+  display: flex;
+  flex-direction: row;
+  .font-size-height (15px; 24px);
+}
+
+.catalog__price span {
+  padding: 25px 0;
+}
+
+.catalog__order {
+  background: none;
+  border: none;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.catalog__link {
+  text-decoration: none;
+  color: @font-colorb;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__wrapper {
+    max-width: 768px;
+    min-width: 668px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .catalog__item {
+    flex-direction: row;
+  }
+
+  .catalog__description-all {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .catalog__link {
+    width: 50%;
+  }
+
+  .catalog__link img {
+    display: flex;
+    width: 334px;
+    height: 334px;
+  }
+
+  .catalog__price {
+    margin-top: auto;
+    border-top: 1px solid #ededed;
+  }
+
+  .catalog__description p {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__wrapper {
+    max-width: 1150px;
+    min-width: 1050px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .catalog__item {
+    flex-direction: column;
+    margin-right: 50px;
+    border: 1px solid #ededed;
+  }
+
+  .catalog__item:last-child {
+    margin-right: 0;
+  }
+
+  .catalog__link {
+    width: auto;
+  }
+
+  .catalog__link img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog__description-all {
+    width: auto;
+  }
+
+  .catalog__price {
+    border: none;
+  }
+
+  .catalog__description p {
+    margin: 0;
+    margin-right: 20px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  .catalog__item:last-child p {
+    padding-bottom: 5px;
+  }
 }
