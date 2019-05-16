@@ -2,6 +2,9 @@
   background-color: @grey;
   color: @font-colorb;
   min-width: 320px;
+  margin-top: -98px;
+  z-index: 1;
+  position: relative;
 }
 
 .catalog-announcement__wrapper {
@@ -11,5 +14,23 @@
 }
 
 .catalog-announcement__wrapper h1 {
-  padding-top: 50px;
+  .font-size-height(27px; 30px);
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-announcement::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 100%;
+    bottom: 0;
+    background: url("../img/bg-zigzag-fill.svg") no-repeat;
+    background-size: 100% auto;
+  }
+
+  .catalog-announcement__wrapper h1 {
+    .font-size-height(43px; 50px);
+  }
 }
