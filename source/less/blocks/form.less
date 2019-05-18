@@ -1,5 +1,6 @@
 .form {
   display: flex;
+  flex-direction: column;
   background-color: @font-colorw;
   color: @font-colorb;
 }
@@ -74,6 +75,7 @@
 
 .form__name-area label,
 .form__name-area input[type="text"] {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -165,9 +167,16 @@ input[type="checkbox"]:checked + label::before {
 
 @media (min-width: @tablet-width) {
   .form__wrapper {
+    flex-direction: row;
     max-width: 768px;
+    width: 100%;
     padding: 0 50px;
+    padding-top: 50px;
     margin: 0 auto;
+
+    &--contact {
+      flex-direction: column;
+    }
   }
 
   .form__radio-area,
@@ -189,6 +198,26 @@ input[type="checkbox"]:checked + label::before {
   .form__text-area input[type="text"] {
     margin-left: 70px;
   }
+
+  .form__name-area label,
+  .form__name-area input[type="text"] {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .form__name-block {
+    width: 100%;
+  }
+
+  .form__name-block div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form__name-block input[type="text"] {
+    margin-left: 15px;
+  }
+
 
   .form__radio-block {
     flex-direction: column;
@@ -216,10 +245,37 @@ input[type="checkbox"]:checked + label::before {
   .form__submit {
     order: 1;
   }
+
+  .form__contact-area,
+  .form__checkbox-area {
+    background-color: #f1f1f1;
+  }
+
+  .form__tel-area,
+  .form__email-area {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+  }
+
+  .form__tel-area input[type="tel"],
+  .form__email-area input[type="email"] {
+    background: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .form__wrapper {
     max-width: 1150px;
+    padding-left: 110px;
+  }
+
+  .form__submit {
+    margin-left: 128px;
+  }
+
+  .form__text {
+    padding-lefT: 135px;
+    padding-right: 315px;
+    padding-bottom: 50px;
   }
 }
