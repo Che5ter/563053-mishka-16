@@ -18,3 +18,25 @@
   padding-top: 120px;
   padding-bottom: 50px;
 }
+
+@media (min-width: @tablet-width) {
+  .form-announcement::after {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    background: url("../img/bg-zigzag-fill.svg") no-repeat;
+    background-size: 100% auto;
+  }
+
+  .form-announcement__wrapper h1 {
+    .font-size-height(43px; 50px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-announcement__wrapper h1 {
+    .font-size-height(53px; 57px);
+  }
+}

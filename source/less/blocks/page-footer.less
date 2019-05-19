@@ -1,19 +1,20 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 0 30px;
   background-color: @grey;
   color: @font-colorb;
 }
 
 .page-footer__wrapper {
   max-width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .page-footer__list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -21,10 +22,11 @@
 
 .footer-social {
   width: 100%;
-  justify-content: space-evenly;
-  padding-bottom: 20px;
+  min-width: 260px;
   padding-top: 28px;
   border-bottom: 1px solid #e5e5e5;
+  justify-content: center;
+  padding-bottom: 25px;
 }
 
 .footer-copyright {
@@ -40,16 +42,22 @@
   &--instagram {
     width: 22px;
     height: 21px;
+    margin-right: 41px;
+    margin-left: -5px;
+    margin-top: 2px;
   }
 
   &--twitter {
     width: 23px;
     height: 20px;
+    margin-top: 1px;
   }
 
   &--fb {
     width: 15px;
     height: 28px;
+    margin-top: -3px;
+    margin-right: 39px;
   }
 
   &--academy {
@@ -61,6 +69,11 @@
 
 .page-footer__logo {
   display: none;
+}
+
+.page-footer__item--dev {
+  margin-right: 25px;
+  .font-size-height(19px; 18px);
 }
 
 @media (min-width: @tablet-width) {
