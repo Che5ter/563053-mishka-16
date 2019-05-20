@@ -136,8 +136,9 @@
 
 .form__text-area input[type="text"] {
   display: block;
-  width: 100%;
+  width: 700px;
   min-height: 142px;
+  margin-left: 6px;
   border: 2px solid #000000;
 }
 
@@ -477,7 +478,7 @@ input[type="checkbox"]:checked + label::before {
 
   input[type="radio"]:checked + label::before,
   input[type="radio"]:not(:checked) + label::before {
-    left: 0px;
+    left: 0;
     top: -16px;
     width: 52px;
     height: 53px;
@@ -492,7 +493,7 @@ input[type="checkbox"]:checked + label::before {
 
   input[type="checkbox"]:checked + label::before,
   input[type="checkbox"]:not(:checked) + label::before {
-    top: 0px;
+    top: 0;
     width: 54px;
     height: 52px;
   }
@@ -529,7 +530,8 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .form__submit {
-    margin-left: 128px;
+    margin-left: 115px;
+    margin-top: 9px;
   }
 
   .form__text {
@@ -620,16 +622,6 @@ input[type="checkbox"]:checked + label::before {
 
   .form__email-button {
     right: 173px;
-  }
-
-  .form__text-area input[type="text"] {
-    width: 700px;
-    margin-left: 6px;
-  }
-
-  .form__submit {
-    margin-left: 115px;
-    margin-top: 9px;
   }
 
   .form__notice-text {
