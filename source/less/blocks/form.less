@@ -101,8 +101,7 @@
   border: none;
   border-bottom: 2px solid #000000;
   .font-size-height(17px; 18px);
-  color: rgb(68, 68, 68);
-  opacity: 0.3;
+  color: rgba(129, 179, 210, 0.3);
 }
 
 .form__tel-area,
@@ -262,13 +261,17 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 24px;
 }
 
+.form__checkbox-area .form__left-column,
+.form__checkbox-area .form__right-column {
+  padding-left: 63px;
+}
+
 @media (min-width: @tablet-width) {
   .form__wrapper {
     flex-direction: row;
     max-width: 768px;
     width: 100%;
     padding: 0 50px;
-    padding-top: 39px;
     margin: 0 auto;
 
     &--contact {
@@ -298,8 +301,8 @@ input[type="checkbox"]:checked + label::before {
 
   .form__name-area label,
   .form__name-area input[type="text"] {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 23px;
+    margin-bottom: 5px;
   }
 
   .form__name-block {
@@ -312,7 +315,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .form__name-block input[type="text"] {
-    margin-left: 15px;
+    margin-left: 42px;
   }
 
 
@@ -332,6 +335,7 @@ input[type="checkbox"]:checked + label::before {
 
   .form__checkbox-block {
     width: 75%;
+    margin-bottom: 26px;
   }
 
   .form__checkbox-block .form__right-column {
@@ -344,6 +348,11 @@ input[type="checkbox"]:checked + label::before {
     padding-top: 16px;
   }
 
+  input[type="radio"]:checked + label,
+  input[type="radio"]:not(:checked) + label {
+    padding-left: 81px;
+  }
+
   .form__footer {
     display: flex;
     flex-direction: row;
@@ -351,16 +360,47 @@ input[type="checkbox"]:checked + label::before {
 
   .form__notice-text {
     margin-left: auto;
+    margin-top: 22px;
+    .font-size-height(17px; 30px);
     order: 2;
   }
 
   .form__submit {
+    width: 230px;
+    margin-bottom: 50px;
+    margin-top: 13px;
+    padding-top: 17px;
+    padding-bottom: 15px;
     order: 1;
   }
 
   .form__contact-area,
   .form__checkbox-area {
+    padding-top: 41px;
     background-color: #f1f1f1;
+  }
+
+  .form__contact-area {
+    padding-top: 72px;
+    padding-bottom: 25px;
+  }
+
+  .form__tel-area input[type="tel"] {
+    padding-left: 16px;
+  }
+
+  .form__email-area input[type="email"] {
+    padding-left: 17px;
+  }
+
+  .form__tel-button {
+    top: -5px;
+    right: 20px;
+  }
+
+  .form__email-button {
+    top: 0;
+    right: 16px;
   }
 
   .form__tel-area,
@@ -374,13 +414,9 @@ input[type="checkbox"]:checked + label::before {
     background: none;
   }
 
-  .form__tel-button,
-  .form__email-button {
-    top: -5px;
-  }
-
   .form__text {
-    margin-top: 25px;
+    margin-top: 64px;
+    margin-bottom: 39px;
     .font-size-height(17px; 30px);
   }
 
@@ -391,6 +427,98 @@ input[type="checkbox"]:checked + label::before {
 
   .form__radio-block div:last-child {
     margin-top: 32px;
+  }
+
+  .form__name-area {
+    padding-bottom: 9px;
+  }
+
+  .form__name-block div:first-child {
+    margin-top: 0;
+  }
+
+  .form__name-block div:nth-child(2) {
+    margin-top: 7px;
+  }
+
+  .form__name-block div:last-child {
+    margin-top: 6px;
+  }
+
+  .form__firstname-block input[type="text"] {
+    margin: 0;
+    margin-left: 25px;
+    padding-top: 19px;
+    padding-left: 16px;
+  }
+
+  .form__lastname-block input[type="text"] {
+    margin: 0;
+    margin-left: 25px;
+    padding-top: 30px;
+    padding-left: 17px;
+  }
+
+  .form__lastname-block label,
+  .form__middlename-block label {
+    margin-top: 33px;
+  }
+
+  .form__middlename-block input[type="text"] {
+    margin: 0;
+    margin-left: 26px;
+    padding-top: 30px;
+    padding-left: 17px;
+  }
+
+  .form__text-area {
+    padding-top: 42px;
+  }
+
+  input[type="radio"]:checked + label::before,
+  input[type="radio"]:not(:checked) + label::before {
+    left: 0px;
+    top: -16px;
+    width: 52px;
+    height: 53px;
+  }
+
+  input[type="radio"]:checked + label::after {
+    left: 15px;
+    top: -1px;
+    width: 22px;
+    height: 22px;
+  }
+
+  input[type="checkbox"]:checked + label::before,
+  input[type="checkbox"]:not(:checked) + label::before {
+    top: 0px;
+    width: 54px;
+    height: 52px;
+  }
+
+  .form__radio-area .form__title {
+    margin-top: 11px;
+  }
+
+  .form__checkbox-area .form__title {
+    margin-top: 27px;
+  }
+
+  .form__name-area .form__title {
+    margin-top: 25px;
+  }
+
+  .form__tel-area .form__title {
+    margin-top: 2px;
+  }
+
+  .form__email-area .form__title {
+    margin-top: 7px;
+  }
+
+  .form__text-area .form__title {
+    margin-top: 17px;
   }
 }
 
