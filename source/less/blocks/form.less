@@ -16,6 +16,7 @@
 
 .form__text {
   margin: 0;
+  margin-top: 22px;
   font-weight: normal;
   .font-size-height(13px; 24px);
 }
@@ -111,7 +112,7 @@
 
 .form__tel-area input[type="tel"] {
   .font-size-height(19px; 18px);
-  padding-top: 0px;
+  padding-top: 0;
   padding-bottom: 14px;
 }
 
@@ -174,8 +175,12 @@ input[type="radio"]:checked + label,
 input[type="radio"]:not(:checked) + label {
   display: inline-block;
   position: relative;
-  padding-left: 62px;
   cursor: pointer;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  padding-left: 61px;
 }
 
 input[type="checkbox"]:checked + label::before,
@@ -263,7 +268,7 @@ input[type="checkbox"]:checked + label::before {
     max-width: 768px;
     width: 100%;
     padding: 0 50px;
-    padding-top: 50px;
+    padding-top: 39px;
     margin: 0 auto;
 
     &--contact {
@@ -288,7 +293,7 @@ input[type="checkbox"]:checked + label::before {
   .form__tel-area input[type="tel"],
   .form__email-area input[type="email"],
   .form__text-area input[type="text"] {
-    margin-left: 70px;
+    .font-size-height(19px; 18px);
   }
 
   .form__name-area label,
@@ -313,15 +318,30 @@ input[type="checkbox"]:checked + label::before {
 
   .form__radio-block {
     flex-direction: column;
+    margin-top: 9px;
   }
 
   .form__title {
-    min-width: 60px;
+    min-width: 25%;
     margin: 0;
 
     &::after {
       display: none;
     }
+  }
+
+  .form__checkbox-block {
+    width: 75%;
+  }
+
+  .form__checkbox-block .form__right-column {
+    padding-top: 16px;
+    padding-left: 112px;
+  }
+
+  .form__checkbox-block .form__left-column {
+    padding-left: 81px;
+    padding-top: 16px;
   }
 
   .form__footer {
@@ -357,6 +377,20 @@ input[type="checkbox"]:checked + label::before {
   .form__tel-button,
   .form__email-button {
     top: -5px;
+  }
+
+  .form__text {
+    margin-top: 25px;
+    .font-size-height(17px; 30px);
+  }
+
+  .form__radio-area {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+  .form__radio-block div:last-child {
+    margin-top: 32px;
   }
 }
 

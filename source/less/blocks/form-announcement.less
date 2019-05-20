@@ -2,7 +2,6 @@
   background-color: @grey;
   color: @font-colorb;
   min-width: 320px;
-  margin-top: -98px;
   z-index: 1;
   position: relative;
 }
@@ -14,23 +13,30 @@
 }
 
 .form-announcement__wrapper h1 {
-  .font-size-height(27px; 30px);
-  padding-top: 146px;
+  padding-top: 71px;
   padding-bottom: 76px;
+  margin: 0;
+  .font-size-height(27px; 30px);
 }
 
 @media (min-width: @tablet-width) {
-  .form-announcement::after {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 100%;
-    bottom: 0;
-    background: url("../img/bg-zigzag-fill.svg") no-repeat;
-    background-size: 100% auto;
+  .form-announcement {
+    margin-top: -77px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 100%;
+      bottom: 0;
+      background: url("../img/bg-zigzag-fill.svg") no-repeat;
+      background-size: 100% auto;
+    }
   }
 
   .form-announcement__wrapper h1 {
+    padding-top: 94px;
+    padding-bottom: 90px;
     .font-size-height(43px; 50px);
   }
 }
