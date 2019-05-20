@@ -5,6 +5,7 @@
   background-position: center -18px;
   background-color: #fafafa;
   color: @font-colorb;
+  border-top: 1px solid #ececec;
 }
 
 .promo__wrapper {
@@ -24,7 +25,7 @@
 }
 
 .promo__item {
-  padding-left: 30px;
+  padding-left: 28px;
   padding-right: 186px;
   padding-top: 26px;
   padding-bottom: 29px;
@@ -62,7 +63,6 @@
     background-position: center 0;
     height: 745px;
     margin-top: -78px;
-    border-top: 1px solid #ececec;
 
     &::after {
       position: absolute;
@@ -98,8 +98,8 @@
 
   .promo__item {
     width: 100%;
-    padding-top: 27px;
-    padding-bottom: 32px;
+    padding-top: 28px;
+    padding-bottom: 30px;
     padding-left: 36px;
     .font-size-height(20px; 30px);
 
@@ -121,6 +121,11 @@
     background-position: center 0;
     background-color: #fafafa;
     height: 745px;
+
+    &::after {
+      background-size: 100% 33px;
+      height: 20px;
+    }
   }
 
   .promo__wrapper {
@@ -136,7 +141,20 @@
   }
 
   .promo__item {
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    padding-right: 330px;
+
+    &--toys {
+      background-position: 92% 55%;
+    }
+
+    &--interior {
+      background-position: 92% 54%;
+    }
+  }
+
+  .promo__title {
+    .font-size-height(53px; 57px);
   }
 }

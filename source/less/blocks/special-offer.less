@@ -185,16 +185,16 @@
   .special-offer::after {
     position: absolute;
     content: "";
-    height: 30px;
+    height: 40px;
     width: 100%;
     background: url("../img/bg-zigzag-line.svg") no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 25px;
   }
 
   .special-offer__wrapper {
     max-width: 1150px;
     margin: 0 auto;
-    padding-left: 175px;
+    padding-left: 225px;
     padding-right: 50px;
     z-index: 100;
   }
@@ -212,14 +212,53 @@
 
   .special-offer__price {
     padding-top: 110px;
+    padding-left: 73px;
   }
 
   .special-offer__title {
+    padding-top: 77px;
     font-size: @h2-desktop-size;
     line-height: @h2-desktop-height;
   }
 
   .special-offer__order {
     margin-bottom: 75px;
+  }
+
+  .special-offer__description-all p {
+    margin-top: 44px;
+  }
+
+  .special-offer__description {
+    width: 292px;
+    margin-top: 31px;
+  }
+
+  tr:first-child .special-offer__key--right {
+    padding-right: 45px;
+  }
+
+  .special-offer__key--right {
+    padding-left: 21px;
+  }
+
+  .special-offer__image img {
+    width: 525px;
+    height: 636px;
+    margin-top: 72px;
+  }
+
+  .special-offer__description td {
+    max-width: 100%;
+  }
+
+  .special-offer__icon {
+    position: absolute;
+    left: -128px;
+    top: 140px;
+  }
+
+  .special-offer__header {
+    position: relative;
   }
 }

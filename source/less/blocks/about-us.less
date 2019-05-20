@@ -179,16 +179,48 @@
   .about-us__wrapper {
     max-width: 1150px;
     margin: 0 auto;
-    padding-left: 175px;
+    padding-left: 225px;
     padding-right: 50px;
   }
 
   .about-us__title {
+    padding-top: 81px;
     font-size: @h2-desktop-size;
     line-height: @h2-desktop-height;
   }
 
+  .features__main-list,
+  .features__secondary-list {
+    width: 350px;
+  }
+
   .features__item {
-    padding-right: 49%;
+    &--flower {
+      padding-right: 125px;
+    }
+
+    &--money {
+      padding-right: 100px;
+      margin-top: 25px;
+    }
+
+    &--heart {
+      padding-right: 116px;
+      margin-top: 26px;
+    }
+
+    &--ball {
+      padding-right: 60px;
+      margin-top: 17px;
+    }
+
+    &--rocket {
+      margin-top: 25px;
+    }
+
+    &--gift {
+      padding-right: 62px;
+      margin-top: 25px;
+    }
   }
 }
