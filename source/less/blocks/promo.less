@@ -1,11 +1,11 @@
 .promo {
   display: flex;
   flex-direction: column;
-  height: 490px;
   background: url("../img/hero-mobile@1x.jpg") no-repeat;
-  background-position: center 0;
+  background-position: center -18px;
   background-color: #fafafa;
   color: @font-colorb;
+  border-top: 1px solid #ececec;
 }
 
 .promo__wrapper {
@@ -19,25 +19,26 @@
 .promo__title {
   font-size: 27px;
   text-align: center;
-  padding-top: 90px;
+  padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .promo__item {
-  padding-left: 30px;
+  padding-left: 28px;
   padding-right: 186px;
-  padding-top: 23px;
-  padding-bottom: 24px;
+  padding-top: 26px;
+  padding-bottom: 29px;
   font-size: 19px;
   line-height: 24px;
 
   &--interior {
-    background: url("../img/icon-interior.svg") #63d1bb no-repeat 90% 50%;
+    margin-top: 122px;
+    background: url("../img/icon-interior.svg") #63d1bb no-repeat 87% 56%;
   }
 
   &--toys {
-    background: url("../img/icon-toy.svg") #63d1bb no-repeat 95% 50%;
+    background: url("../img/icon-toy.svg") #63d1bb no-repeat 90% 46%;
     background-color: #56c3b2;
   }
 }
@@ -61,7 +62,7 @@
     background: url("../img/hero-tablet@1x.jpg") no-repeat;
     background-position: center 0;
     height: 745px;
-    margin-top: -80px;
+    margin-top: -78px;
 
     &::after {
       position: absolute;
@@ -70,7 +71,7 @@
       width: 100%;
       background: url("../img/bg-zigzag-fill.svg") no-repeat;
       background-size: 100% auto;
-      bottom: 0;
+      bottom: -3px;
     }
   }
 
@@ -97,8 +98,19 @@
 
   .promo__item {
     width: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    padding-left: 36px;
+    .font-size-height(20px; 30px);
+
+    &--interior {
+      margin-top: 0;
+      background-position: 87% 53%;
+    }
+
+    &--toys {
+      background-position: 88% 50%;
+    }
   }
 }
 
@@ -109,6 +121,11 @@
     background-position: center 0;
     background-color: #fafafa;
     height: 745px;
+
+    &::after {
+      background-size: 100% 33px;
+      height: 20px;
+    }
   }
 
   .promo__wrapper {
@@ -124,7 +141,20 @@
   }
 
   .promo__item {
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    padding-right: 330px;
+
+    &--toys {
+      background-position: 92% 55%;
+    }
+
+    &--interior {
+      background-position: 92% 54%;
+    }
+  }
+
+  .promo__title {
+    .font-size-height(53px; 57px);
   }
 }
