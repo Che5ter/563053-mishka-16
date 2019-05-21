@@ -136,9 +136,7 @@
 
 .form__text-area input[type="text"] {
   display: block;
-  width: 700px;
   min-height: 142px;
-  margin-left: 6px;
   border: 2px solid #000000;
 }
 
@@ -161,21 +159,18 @@
   .font-size-height(17px; 16px);
 }
 
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked),
-input[type="radio"]:checked,
-input[type="radio"]:not(:checked) {
-  position: absolute;
-  left: -5555px;
-}
-
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label,
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
+.form__input-checkbox:checked + label,
+.form__input-checkbox:not(:checked) + label,
+.form__input-radio:checked + label,
+.form__input-radio:not(:checked) + label {
   display: inline-block;
   position: relative;
   cursor: pointer;
+}
+
+.form__input-checkbox:checked + label,
+.form__input-checkbox:not(:checked) + label {
+  padding-left: 63px;
 }
 
 input[type="radio"]:checked + label,
@@ -335,7 +330,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .form__checkbox-block {
-    width: 75%;
+    width: 100%;
     margin-bottom: 26px;
   }
 
@@ -521,6 +516,20 @@ input[type="checkbox"]:checked + label::before {
   .form__text-area .form__title {
     margin-top: 17px;
   }
+
+  .form__checkbox-block label {
+    margin-bottom: 42px;
+    margin-top: 16px;
+  }
+
+  .form__checkbox-block label:nth-child(odd) {
+    margin-right: 17px;
+  }
+
+  .form__input-checkbox:checked + label,
+  .form__input-checkbox:not(:checked) + label {
+    padding-left: 81px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -570,7 +579,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .form__checkbox-block {
-    margin-bottom: 57px;
+    margin-bottom: 30px;
   }
 
   .form__firstname-block input[type="text"] {
@@ -627,5 +636,30 @@ input[type="checkbox"]:checked + label::before {
   .form__notice-text {
     margin-left: 170px;
     margin-top: 19px;
+  }
+
+  .form__checkbox-block label {
+    margin-top: -7px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+  }
+
+  input[type="checkbox"]:checked + label::before,
+  input[type="checkbox"]:not(:checked) + label::before {
+    top: 8px;
+  }
+
+  .form__input-checkbox:checked + label,
+  .form__input-checkbox:not(:checked) + label {
+    width: 202px;
+    margin-right: 27px;
+    padding: 23px 10px 35px 80px;
+  }
+
+  .form__text-area input[type="text"] {
+    display: block;
+    width: 700px;
+    min-height: 142px;
+    margin-left: 6px;
   }
 }
