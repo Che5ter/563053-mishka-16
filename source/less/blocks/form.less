@@ -488,9 +488,13 @@ input[type="checkbox"]:checked + label::before {
 
   input[type="checkbox"]:checked + label::before,
   input[type="checkbox"]:not(:checked) + label::before {
-    top: 0;
+    top: -15px;
     width: 54px;
     height: 52px;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background-size: 33px;
   }
 
   .form__radio-area .form__title {
@@ -522,8 +526,8 @@ input[type="checkbox"]:checked + label::before {
     margin-top: 16px;
   }
 
-  .form__checkbox-block label:nth-child(odd) {
-    margin-right: 17px;
+  .form__input-checkbox + label:nth-of-type(odd) {
+    margin-right: 32px;
   }
 
   .form__input-checkbox:checked + label,
