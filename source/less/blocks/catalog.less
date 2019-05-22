@@ -145,18 +145,19 @@
   .catalog__list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 125px;
     margin-bottom: 5px;
   }
 
   .catalog__item {
     flex-direction: column;
-    min-width: 316px;
+    width: 316px;
     margin-right: 50px;
     border: 1px solid #ededed;
   }
 
-  .catalog__item:last-child {
+  .catalog__item:nth-child(3n) {
     margin-right: 0;
   }
 
