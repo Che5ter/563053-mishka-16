@@ -5,12 +5,11 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style.css" rel="stylesheet" />
-  <link href="css/normalize.css" rel="stylesheet" />
 </head>
 <body>
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <a class="main-nav__logo" href="#">
+      <a class="main-nav__logo">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -222,7 +221,7 @@
                 </a>
                 <ul class="page-footer__list footer-social">
                   <li class="page-footer__item">
-                    <a class="page-footer__link page-footer__link--instagram" href="#">
+                    <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com">
                       <svg class="page-footer__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.769px" height="21.334px" viewBox="53.115 53.19 21.769 21.334" enable-background="new 53.115 53.19 21.769 21.334" xml:space="preserve">
                         <g id="instagram">
                           <g>
@@ -234,7 +233,7 @@
                     </a>
                   </li>
                   <li class="page-footer__item">
-                    <a class="page-footer__link page-footer__link--fb" href="#">
+                    <a class="page-footer__link page-footer__link--fb" href="https://facebook.com">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.962px" height="27.718px" viewBox="56.519 49.996 14.962 27.718" enable-background="new 56.519 49.996 14.962 27.718" xml:space="preserve">
                         <g id="facebook">
                           <g>
@@ -246,7 +245,7 @@
                     </a>
                   </li>
                   <li class="page-footer__item">
-                    <a class="page-footer__link page-footer__link--twitter" href="#">
+                    <a class="page-footer__link page-footer__link--twitter" href="https://twitter.com">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.494px" height="20.168px" viewBox="52.253 53.771 23.494 20.168" enable-background="new 52.253 53.771 23.494 20.168" xml:space="preserve">
                         <g id="twitter">
                           <g>
@@ -258,7 +257,7 @@
                     </a>
                   </li>
                 </ul>
-                <a class="page-footer__link page-footer__link--dev" href="#">
+                <a class="page-footer__link page-footer__link--dev" href="https://htmlacademy.ru/intensive/adaptive">
                   <span class="page-footer__dev">
                     Разработано
                   </span>
@@ -269,22 +268,7 @@
                 </a>
               </div>
             </footer>
-            <script>
-
-            var navMain = document.querySelector('.main-nav');
-            var navToggle = document.querySelector('.main-nav__toggle');
-
-            navMain.classList.remove('main-nav--nojs');
-
-            navToggle.addEventListener('click', function() {
-              if (navMain.classList.contains('main-nav--closed')) {
-                navMain.classList.remove('main-nav--closed');
-                navMain.classList.add('main-nav--opened');
-              } else {
-                navMain.classList.add('main-nav--closed');
-                navMain.classList.remove('main-nav--opened');
-              }
-            });
-          </script>
+            <script src="js/picturefill.js"></script>
+            <script src="js/menu.js"></script>
           </body>
           </html>
