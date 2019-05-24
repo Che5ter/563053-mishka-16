@@ -57,12 +57,24 @@
 }
 
 .video__picture {
+  position: relative;
   margin-top: 95px;
 }
 
 .video__description-all {
   display: flex;
   flex-direction: column;
+}
+
+.video__btn-play {
+  width: 101px;
+  height: 77px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: url("../img/icon-play.svg") no-repeat;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -110,7 +122,7 @@
     padding-top: 32px;
     padding-left: 39px;
     padding-right: 35px;
-    padding-bottom: 34px;
+    padding-bottom: 35px;
   }
 }
 

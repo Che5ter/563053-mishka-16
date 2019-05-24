@@ -1,25 +1,27 @@
 var overlay = document.querySelector(".overlay");
 var submit = document.querySelector(".modal-form__submit");
-var orderCatalog = document.querySelector(".catalog__order");
+var orderCatalogLinks = document.querySelectorAll(".catalog__order");
 
-orderCatalog.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  overlay.classList.remove("overlay--close");
-  overlay.classList.add("overlay--show");
-});
-
-submit.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  overlay.classList.remove("overlay--show");
-  overlay.classList.add("overlay--close");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+orderCatalogLinks.forEach(function (link) {
+  link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    if (overlay.classList.contains("overlay--show")) {
-      overlay.classList.remove("overlay--show");
-      overlay.classList.add("overlay--close");
-    }
+    overlay.classList.remove("overlay--close");
+    overlay.classList.add("overlay--show");
+  })
+})
+
+var closeModal = function (evt) {
+  console.log(evt);
+  if (evt.target.offsetParent === null) {
+    overlay.classList.remove("overlay--show");
+    overlay.classList.add("overlay--close");
+  }
+};
+
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    closeModal(evt);
   }
 });

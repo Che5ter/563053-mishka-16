@@ -8,18 +8,18 @@ order.addEventListener("click", function(evt) {
   overlay.classList.add("overlay--show");
 });
 
-submit.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  overlay.classList.remove("overlay--show");
-  overlay.classList.add("overlay--close");
-});
+var closeModal = function (evt) {
+  console.log(evt);
+  if (evt.target.offsetParent === null) {
+    overlay.classList.remove("overlay--show");
+    overlay.classList.add("overlay--close");
+  }
+};
 
-window.addEventListener("keydown", function (evt) {
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (overlay.classList.contains("overlay--show")) {
-      overlay.classList.remove("overlay--show");
-      overlay.classList.add("overlay--close");
-    }
+    closeModal(evt);
   }
 });

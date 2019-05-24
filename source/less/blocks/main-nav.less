@@ -34,11 +34,11 @@
   line-height: 24px;
   text-align: left;
   padding: 0;
-  padding-top: 25px;
 }
 
-.main-nav__button-search svg {
-  fill: red;
+.main-nav__button-search svg,
+.main-nav__item--basket svg {
+  fill: #d3d2d2;
 }
 
 .main-nav__link {
@@ -105,6 +105,13 @@
 
 .main-nav__search-picture {
   top: 27px;
+}
+
+.main-nav__button-cart {
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: bold;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -251,7 +258,16 @@
   }
 
   .main-nav__link {
+    display: flex;
     margin: 0;
+  }
+
+  .main-nav__search-text {
+    font-size: 0;
+  }
+
+  .main-nav__button-cart {
+    display: flex;
   }
 }
 

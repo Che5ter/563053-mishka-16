@@ -56,7 +56,7 @@
 
 .contacts__write {
   width: 260px;
-  margin-top: 33px;
+  margin-top: 40px;
   margin-bottom: 39px;
   margin-left: auto;
   margin-right: auto;
@@ -67,6 +67,12 @@
 .contacts__map {
   width: 100%;
   height: 457px;
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/map-mobile@2x.jpg") no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -133,6 +139,15 @@
 
   .contacts__map {
     position: inherit;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 55px;
+    background: url("../img/map-tablet@1x.jpg") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/map-tablet@2x.jpg") no-repeat;
+    }
   }
 
   .contacts__adress-block {
@@ -178,7 +193,7 @@
     max-width: 1150px;
     padding-left: 225px;
     margin-top: 135px;
-    margin-bottom: 97px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -195,6 +210,11 @@
     position: relative;
     width: 525px;
     margin-top: 7px;
+    background: url("../img/map-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/map-desktop@2x.jpg") no-repeat;
+    }
   }
 
   .contacts__all-info {
@@ -207,7 +227,7 @@
 
   .contacts__write {
     position: absolute;
-    bottom: -49px;
+    bottom: -3px;
     left: 225px;
   }
 
