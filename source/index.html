@@ -199,14 +199,12 @@
               </div>
             </div>
               <div class="contacts__map" id="map">
-                <div class="contacts__wrapper contacts__wrapper--map">
-                  <picture>
+                  <!--<picture>
                     <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
                         <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322px" height="457px" alt="Как нас найти">
-                      </picture>
+                      </picture> -->
                     </div>
-                </div>
                   <a class="contacts__write button" href="#">Напишите нам</a>
               </section>
             </main>
@@ -255,23 +253,23 @@
               </div>
             </footer>
             <div class="overlay overlay--close">
-              <section class="modal-form modal-form--show">
+              <section class="modal-form">
                 <h2 class="modal-form__title">Добавить в корзину</h2>
                 <form class="modal-form__form" action="https://echo.htmlacademy.ru" method="post">
                   <div class="modal-form__fiedset">
                     <span class="modal-form__select">Выберите размер:</span>
                     <ul class="modal-form__list">
                       <li class="modal-form__item">
-                        <input class="modal-form__radio visually-hidden" type="radio" name="size" id="size-s" value="small" />
+                        <input class="modal-form__radio visually-hidden" type="radio" name="size" id="size-s" value="small" checked />
                         <label class="modal-form__label" for="size-s">S</label>
                       </li>
                       <li class="modal-form__item">
                         <input class="modal-form__radio visually-hidden" type="radio" name="size" id="size-m" value="medium" />
-                        <label class="modal-form__label" for="size-s">M</label>
+                        <label class="modal-form__label" for="size-m">M</label>
                       </li>
                       <li class="modal-form__item">
                         <input class="modal-form__radio visually-hidden" type="radio" name="size" id="size-l" value="large" />
-                        <label class="modal-form__label" for="size-s">L</label>
+                        <label class="modal-form__label" for="size-l">L</label>
                       </li>
                     </ul>
                     <button class="modal-form__submit button" type="submit">Добавить</button>
@@ -281,5 +279,7 @@
             </div>
             <script src="js/picturefill.min.js"></script>
             <script src="js/menu.js"></script>
+            <script src="js/modal.js"></script>
+            <script src="js/map.js"></script>
           </body>
           </html>

@@ -16,7 +16,7 @@
 
 .form__text {
   margin: 0;
-  margin-top: 19px;
+  margin-top: 21px;
   font-weight: normal;
   .font-size-height(13px; 24px);
 }
@@ -173,15 +173,15 @@
   padding-left: 63px;
 }
 
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
+.form__input-radio:checked + label,
+.form__input-radio:not(:checked) + label {
   padding-left: 61px;
 }
 
-input[type="checkbox"]:checked + label::before,
-input[type="checkbox"]:not(:checked) + label::before,
-input[type="radio"]:checked + label::before,
-input[type="radio"]:not(:checked) + label::before {
+.form__input-checkbox:checked + label::before,
+.form__input-checkbox:not(:checked) + label::before,
+.form__input-radio:checked + label::before,
+.form__input-radio:not(:checked) + label::before {
   .pseudo-element();
   left: 0;
   top: -11px;
@@ -190,12 +190,12 @@ input[type="radio"]:not(:checked) + label::before {
   border: 2px solid #000000;
 }
 
-input[type="radio"]:checked + label::before,
-input[type="radio"]:not(:checked) + label::before {
+.form__input-radio:checked + label::before,
+.form__input-radio:not(:checked) + label::before {
   border-radius: 100%;
 }
 
-input[type="radio"]:checked + label::after {
+.form__input-radio:checked + label::after {
   .pseudo-element();
   left: 12px;
   top: 1px;
@@ -205,7 +205,7 @@ input[type="radio"]:checked + label::after {
   background-color: #62d1ba;
 }
 
-input[type="checkbox"]:checked + label::before {
+.form__input-checkbox:checked + label::before {
   background: url("../img/icon-tick.svg") no-repeat;
   background-position: 50% 50%;
   background-size: 24px;
@@ -233,7 +233,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .form__tel-area .form__title {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .form__email-area {
@@ -241,12 +241,12 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .form__email-area .form__title {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .form__email-area input[type="email"] {
   padding-top: 3px;
-  padding-bottom: 15px;
+  padding-bottom: 19px;
 }
 
 .form__text-area {
@@ -358,8 +358,8 @@ input[type="checkbox"]:checked + label::before {
     padding-top: 16px;
   }
 
-  input[type="radio"]:checked + label,
-  input[type="radio"]:not(:checked) + label {
+  .form__input-radio:checked + label,
+  .form__input-radio:not(:checked) + label {
     padding-left: 81px;
   }
 
@@ -397,10 +397,12 @@ input[type="checkbox"]:checked + label::before {
 
   .form__tel-area input[type="tel"] {
     padding-left: 16px;
+    padding-bottom: 10px;
   }
 
   .form__email-area input[type="email"] {
     padding-left: 17px;
+    padding-bottom: 12px;
   }
 
   .form__tel-button {
@@ -425,7 +427,7 @@ input[type="checkbox"]:checked + label::before {
   }
 
   .form__text {
-    margin-top: 64px;
+    margin-top: 70px;
     margin-bottom: 39px;
     .font-size-height(17px; 30px);
   }
@@ -458,14 +460,14 @@ input[type="checkbox"]:checked + label::before {
   .form__firstname-block input[type="text"] {
     margin: 0;
     margin-left: 25px;
-    padding-top: 19px;
+    padding-top: 16px;
     padding-left: 16px;
   }
 
   .form__lastname-block input[type="text"] {
     margin: 0;
     margin-left: 25px;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 17px;
   }
 
@@ -477,7 +479,7 @@ input[type="checkbox"]:checked + label::before {
   .form__middlename-block input[type="text"] {
     margin: 0;
     margin-left: 26px;
-    padding-top: 30px;
+    padding-top: 26px;
     padding-left: 17px;
   }
 
@@ -486,29 +488,29 @@ input[type="checkbox"]:checked + label::before {
     padding-top: 41px;
   }
 
-  input[type="radio"]:checked + label::before,
-  input[type="radio"]:not(:checked) + label::before {
+  .form__input-radio:checked + label::before,
+  .form__input-radio:not(:checked) + label::before {
     left: 0;
     top: -16px;
     width: 52px;
     height: 53px;
   }
 
-  input[type="radio"]:checked + label::after {
+  .form__input-radio:checked + label::after {
     left: 15px;
     top: -1px;
     width: 22px;
     height: 22px;
   }
 
-  input[type="checkbox"]:checked + label::before,
-  input[type="checkbox"]:not(:checked) + label::before {
+  .form__input-checkbox:checked + label::before,
+  .form__input-checkbox:not(:checked) + label::before {
     top: -15px;
     width: 54px;
     height: 52px;
   }
 
-  input[type="checkbox"]:checked + label::before {
+  .form__input-checkbox:checked + label::before {
     background-size: 33px;
   }
 
@@ -616,21 +618,21 @@ input[type="checkbox"]:checked + label::before {
 
   .form__firstname-block input[type="text"] {
     margin-left: 23px;
-    padding-top: 20px;
+    padding-top: 16px;
     padding-left: 16px;
     margin-right: 175px;
   }
 
   .form__lastname-block input[type="text"] {
     margin-left: 24px;
-    padding-top: 29px;
+    padding-top: 25px;
     padding-left: 18px;
     margin-right: 175px;
   }
 
   .form__middlename-block input[type="text"] {
     margin-left: 24px;
-    padding-top: 30px;
+    padding-top: 26px;
     padding-left: 18px;
     margin-right: 175px;
   }
@@ -677,8 +679,8 @@ input[type="checkbox"]:checked + label::before {
     margin-left: 6px;
   }
 
-  input[type="checkbox"]:checked + label::before,
-  input[type="checkbox"]:not(:checked) + label::before {
+  .form__input-checkbox:checked + label::before,
+  .form__input-checkbox:not(:checked) + label::before {
     top: 8px;
   }
 
