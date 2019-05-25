@@ -47,6 +47,16 @@
   color: @font-colorb;
 }
 
+.main-nav__link:hover {
+  opacity: 0.6;
+}
+
+.main-nav__link--basket:hover svg,
+.main-nav__link--search:hover svg {
+  fill: #63d1bb;
+  opacity: 1;
+}
+
 .events-nav,
 .main-nav__delivery {
   display: none;
@@ -80,6 +90,10 @@
   background-color: @font-colorw;
   color: @font-colorb;
   border-bottom: 1px solid #ececec;
+}
+
+.main-nav__logo:hover {
+  opacity: 0.6;
 }
 
 .main-nav__logo-image {
@@ -244,7 +258,7 @@
   .main-nav__basket-picture,
   .main-nav__search-picture {
     display: block;
-    position: initial;
+    position: static;
   }
 
   .main-nav__item--basket {
@@ -312,6 +326,7 @@
 
   .action-nav {
     order: 2;
+    margin-left: 289px;
     margin-left: auto;
     font-size: 17px;
     padding-left: 76px;

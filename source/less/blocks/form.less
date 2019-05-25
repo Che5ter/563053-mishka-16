@@ -101,12 +101,44 @@
   border: none;
   border-bottom: 2px solid #000000;
   .font-size-height(17px; 18px);
-  color: rgba(129, 179, 210, 0.3);
+  color: @font-colorb;
+}
+
+.form__name-area input[type="text"]:hover,
+.form__tel-area input[type="tel"]:hover,
+.form__email-area input[type="email"]:hover {
+  border-color: #62d1ba;
+  outline: none;
+}
+
+.form__name-area input[type="text"]:active,
+.form__tel-area input[type="tel"]:active,
+.form__email-area input[type="email"]:active {
+  color: #444444;
+  outline: none;
+}
+
+.form__name-area input[type="text"]:focus,
+.form__tel-area input[type="tel"]:focus,
+.form__email-area input[type="email"]:focus {
+  color: #444444;
+  outline: none;
 }
 
 .form__tel-area,
 .form__email-area {
   position: relative;
+}
+
+.form__tel-button svg,
+.form__email-button svg {
+  opacity: 0.2;
+}
+
+.form__tel-button:hover svg,
+.form__email-button:hover svg {
+  fill: #62d1ba;
+  opacity: 1;
 }
 
 .form__tel-area input[type="tel"] {
@@ -120,7 +152,6 @@
   position: absolute;
   background: none;
   border: none;
-  opacity: 0.2;
   z-index: 2;
 }
 
@@ -188,6 +219,20 @@
   width: 40px;
   height: 40px;
   border: 2px solid #000000;
+}
+
+.form__input-checkbox:checked + label:hover::before,
+.form__input-checkbox:not(:checked) + label:hover::before,
+.form__input-radio:checked + label:hover::before,
+.form__input-radio:not(:checked) + label:hover::before {
+  border-color: #62d1ba;
+}
+
+.form__input-checkbox:checked + label:active::before,
+.form__input-checkbox:not(:checked) + label:active::before,
+.form__input-radio:checked + label:active::before,
+.form__input-radio:not(:checked) + label:active::before {
+  border-color: #444444;
 }
 
 .form__input-radio:checked + label::before,
@@ -272,8 +317,17 @@
   font-size: 17px;
   line-height: 18px;
   border: 2px solid #000000;
+  color: rgba(68, 68, 68, 0.3);
   outline: none;
   resize: none;
+}
+
+.form__text-area textarea:hover {
+  border-color: #62d1ba;
+}
+
+.form__text-area textarea:focus {
+  color: #444444;
 }
 
 @media (min-width: @tablet-width) {

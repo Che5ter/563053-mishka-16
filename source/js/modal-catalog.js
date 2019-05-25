@@ -11,17 +11,13 @@ orderCatalogLinks.forEach(function (link) {
 })
 
 var closeModal = function (evt) {
-  console.log(evt);
-  if (evt.target.offsetParent === null) {
+  if (evt.target.offsetParent === null || evt.target.offsetParent.tagName === "BODY") {
     overlay.classList.remove("overlay--show");
     overlay.classList.add("overlay--close");
   }
 };
 
-overlay.addEventListener('click', closeModal);
-
+overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    closeModal(evt);
-  }
+  return (evt.keyCode === 27) && closeModal(evt);
 });
