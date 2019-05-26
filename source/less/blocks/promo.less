@@ -39,11 +39,6 @@
 
   &--interior {
     margin-top: 122px;
-    background-color: #63d1bb;
-  }
-
-  &--toys {
-    background-color: #56c3b2;
   }
 }
 
@@ -56,33 +51,39 @@
 
 .promo__link {
   display: inline-block;
+  min-height: 103px;
+  position: relative;
   padding: 26px 186px 29px 28px;
   text-decoration: none;
   color: @font-colorw;
 
   &--interior {
-    background: url("../img/icon-interior.svg") no-repeat 87% 56%;
+    background-color: #63d1bb;
   }
 
   &--toys {
-    background: url("../img/icon-toy.svg") no-repeat 90% 46%;
+    background-color: #56c3b2;
   }
 }
 
-.promo__item--interior:hover {
-  height: @height-promo-mobile + 5px;
-  background-position: 87% 50%;
+.promo__link--interior:hover,
+.promo__link--toys:hover {
+    min-height: 108px;
+    transform: translateY(-5px);
+    margin-bottom: -5px;
 }
 
-.promo__item--toys:hover {
-  height: @height-promo-mobile + 5px;
-  background-position: 90% 41%;
+.promo__link--interior svg {
+  position: absolute;
+  top: 23px;
+  right: 37px;
 }
 
-.promo__link:active {
-  opacity: 0.3;
+.promo__link--toys svg {
+  position: absolute;
+  top: 21px;
+  right: 26px;
 }
-
 
 @media (min-width: @tablet-width) {
   .promo {
@@ -142,23 +143,27 @@
   }
 
   .promo__link {
+    min-height: 118px;
     padding-top: 28px;
     padding-bottom: 30px;
     padding-left: 36px;
-
-    &--toys {
-      background-position: 88% 55%;
-    }
   }
 
-  .promo__item--interior:hover {
-    height: @height-promo-tablet + 5px;
-    background-position: 87% 50%;
+  .promo__link--interior:hover,
+  .promo__link--toys:hover {
+      min-height: 123px;
+      transform: translateY(-5px);
+      margin-bottom: -5px;
   }
 
-  .promo__item--toys:hover {
-    height: @height-promo-tablet + 5px;
-    background-position: 90% 41%;
+  .promo__link--interior svg {
+    top: 29px;
+    right: 37px;
+  }
+
+  .promo__link--toys svg {
+    top: 32px;
+    right: 35px;
   }
 }
 
@@ -198,16 +203,6 @@
     min-width: 1050px;
   }
 
-  .promo__item {
-    &--toys {
-      background-position: 92% 55%;
-    }
-
-    &--interior {
-      background-position: 92% 54%;
-    }
-  }
-
   .promo__title {
     .font-size-height(53px; 57px);
   }
@@ -216,23 +211,5 @@
     padding-top: 28px;
     padding-bottom: 30px;
     padding-right: 330px;
-
-    &--toys {
-      background-position: 92% 55%;
-    }
-
-    &--interior {
-      background-position: 92% 56%;
-    }
-  }
-
-  .promo__item--interior:hover {
-    height: @height-promo-desktop + 5px;
-    background-position: 87% 50%;
-  }
-
-  .promo__item--toys:hover {
-    height: @height-promo-desktop + 5px;
-    background-position: 90% 41%;
   }
 }

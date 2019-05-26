@@ -98,6 +98,7 @@
 .form__email-area input[type="email"] {
   width: 100%;
   padding-bottom: 10px;
+  padding-right: 50px;
   border: none;
   border-bottom: 2px solid #000000;
   .font-size-height(17px; 18px);
@@ -122,7 +123,6 @@
 .form__tel-area input[type="tel"]:focus,
 .form__email-area input[type="email"]:focus {
   color: #444444;
-  outline: none;
 }
 
 .form__tel-area,
@@ -130,15 +130,17 @@
   position: relative;
 }
 
-.form__tel-button svg,
-.form__email-button svg {
+.form__tel-svg,
+.form__mail-svg {
   opacity: 0.2;
 }
 
-.form__tel-button:hover svg,
-.form__email-button:hover svg {
-  fill: #62d1ba;
-  opacity: 1;
+.form__email-area input[type=email]:hover + .form__mail-svg,
+.form__email-area input[type=email]:focus + .form__mail-svg,
+.form__tel-area input[type=tel]:hover + .form__tel-svg,
+.form__tel-area input[type=tel]:focus + .form__tel-svg {
+    fill: #62d1ba;
+    opacity: 1;
 }
 
 .form__tel-area input[type="tel"] {
@@ -147,22 +149,20 @@
   padding-bottom: 14px;
 }
 
-.form__tel-button,
-.form__email-button {
+.form__tel-svg,
+.form__mail-svg {
   position: absolute;
-  background: none;
-  border: none;
   z-index: 2;
 }
 
-.form__tel-button {
+.form__tel-svg {
   top: 57px;
-  right: 2px;
+  right: 8px;
 }
 
-.form__email-button {
+.form__mail-svg {
   top: 57px;
-  right: -2px;
+  right: 2px;
 }
 
 .form__text-area input[type="text"] {
@@ -459,14 +459,14 @@
     padding-bottom: 12px;
   }
 
-  .form__tel-button {
-    top: -5px;
-    right: 20px;
+  .form__tel-svg {
+    top: -3px;
+    right: 26px;
   }
 
-  .form__email-button {
-    top: 0;
-    right: 16px;
+  .form__mail-svg {
+    top: 2px;
+    right: 22px;
   }
 
   .form__tel-area,
@@ -714,12 +714,12 @@
     margin-left: 6px;
   }
 
-  .form__tel-button {
-    right: 178px;
+  .form__tel-svg {
+    right: 183px;
   }
 
-  .form__email-button {
-    right: 173px;
+  .form__mail-svg {
+    right: 179px;
   }
 
   .form__notice-text {
