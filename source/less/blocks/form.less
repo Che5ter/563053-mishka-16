@@ -132,27 +132,23 @@
 
 .form__tel-svg,
 .form__mail-svg {
+  position: absolute;
+  z-index: 2;
   opacity: 0.2;
 }
 
-.form__email-area input[type=email]:hover + .form__mail-svg,
-.form__email-area input[type=email]:focus + .form__mail-svg,
-.form__tel-area input[type=tel]:hover + .form__tel-svg,
-.form__tel-area input[type=tel]:focus + .form__tel-svg {
-    fill: #62d1ba;
-    opacity: 1;
+.form__email-area input[type="email"]:hover + .form__mail-svg,
+.form__email-area input[type="email"]:focus + .form__mail-svg,
+.form__tel-area input[type="tel"]:hover + .form__tel-svg,
+.form__tel-area input[type="tel"]:focus + .form__tel-svg {
+  fill: #62d1ba;
+  opacity: 1;
 }
 
 .form__tel-area input[type="tel"] {
   .font-size-height(19px; 18px);
   padding-top: 0;
   padding-bottom: 14px;
-}
-
-.form__tel-svg,
-.form__mail-svg {
-  position: absolute;
-  z-index: 2;
 }
 
 .form__tel-svg {
