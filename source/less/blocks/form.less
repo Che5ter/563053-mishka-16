@@ -8,6 +8,7 @@
 .form__wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 320px;
   padding: 0 30px;
   margin: 0 auto;
@@ -22,6 +23,7 @@
 }
 
 .form__title {
+  display: block;
   .font-size-height(17px; 16px);
   position: relative;
   color: #63d1bb;
@@ -123,6 +125,7 @@
 .form__tel-area input[type="tel"]:focus,
 .form__email-area input[type="email"]:focus {
   color: #444444;
+  border-color: #62d1ba;
 }
 
 .form__tel-area,
@@ -323,6 +326,7 @@
 }
 
 .form__text-area textarea:focus {
+  border-color: #62d1ba;
   color: #444444;
 }
 
@@ -427,7 +431,7 @@
 
   .form__submit {
     width: 230px;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
     margin-top: 13px;
     padding-top: 17px;
     padding-bottom: 15px;

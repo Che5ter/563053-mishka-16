@@ -17,6 +17,10 @@
   margin-bottom: 58px;
 }
 
+.video__content:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
 .video__title {
   position: absolute;
   padding-left: 90px;
@@ -75,15 +79,16 @@
   position: absolute;
   background: url("../img/icon-play.svg") no-repeat;
   border: none;
+  cursor: pointer;
 }
 
 .video__btn-play:hover {
-  transform: scale(1.2) translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .video__btn-play:active {
-  transform: scale(0.8) translate(-50%, -50%);
-  opacity: 0.3;
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0.8;
 }
 
 @media (min-width: @tablet-width) {
