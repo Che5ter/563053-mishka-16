@@ -3,47 +3,43 @@
   flex-direction: column;
   background: url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center -18px;
-  background-color: #fafafa;
+  background-color: #f9f9f9;
   color: @font-colorb;
   border-top: 1px solid #ececec;
-}
 
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  background: url("../img/hero-mobile@2x.jpg") no-repeat;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/hero-mobile@2x.jpg") no-repeat;
+    background-size: 575px 363px;
+    background-position: center -13px;
+    background-color: #f9f9f9;
+  }
 }
 
 .promo__wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100%;
   max-width: 320px;
   margin: 0 auto;
 }
 
 .promo__title {
-  font-size: 27px;
-  text-align: center;
   padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .promo__item {
-  padding-left: 28px;
-  padding-right: 186px;
-  padding-top: 26px;
-  padding-bottom: 29px;
   font-size: 19px;
   line-height: 24px;
 
   &--interior {
     margin-top: 122px;
-    background: url("../img/icon-interior.svg") #63d1bb no-repeat 87% 56%;
-  }
-
-  &--toys {
-    background: url("../img/icon-toy.svg") #63d1bb no-repeat 90% 46%;
-    background-color: #56c3b2;
   }
 }
 
@@ -55,10 +51,40 @@
 }
 
 .promo__link {
+  display: inline-block;
+  min-height: 103px;
+  position: relative;
+  padding: 26px 186px 29px 28px;
   text-decoration: none;
   color: @font-colorw;
+
+  &--interior {
+    background-color: #63d1bb;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+  }
 }
 
+.promo__link--interior:hover,
+.promo__link--toys:hover {
+  min-height: 108px;
+  transform: translateY(-5px);
+  margin-bottom: -5px;
+}
+
+.promo__link--interior svg {
+  position: absolute;
+  top: 23px;
+  right: 37px;
+}
+
+.promo__link--toys svg {
+  position: absolute;
+  top: 21px;
+  right: 26px;
+}
 
 @media (min-width: @tablet-width) {
   .promo {
@@ -81,6 +107,9 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background: url("../img/hero-tablet@2x.jpg") no-repeat;
+      background-position: center 0;
+      background-size: 1150px 746px;
+      background-color: #f9f9f9;
     }
   }
 
@@ -106,20 +135,36 @@
   }
 
   .promo__item {
-    width: 100%;
-    padding-top: 28px;
-    padding-bottom: 30px;
-    padding-left: 36px;
+    width: 50%;
     .font-size-height(20px; 30px);
 
     &--interior {
       margin-top: 0;
-      background-position: 87% 53%;
     }
+  }
 
-    &--toys {
-      background-position: 88% 50%;
-    }
+  .promo__link {
+    min-height: 118px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    padding-left: 36px;
+  }
+
+  .promo__link--interior:hover,
+  .promo__link--toys:hover {
+    min-height: 123px;
+    transform: translateY(-5px);
+    margin-bottom: -5px;
+  }
+
+  .promo__link--interior svg {
+    top: 29px;
+    right: 37px;
+  }
+
+  .promo__link--toys svg {
+    top: 32px;
+    right: 35px;
   }
 }
 
@@ -128,26 +173,27 @@
     margin-top: -79px;
     background: url("../img/hero-desktop@1x.jpg") no-repeat;
     background-position: center 0;
-    background-color: #fafafa;
+    background-color: #f9f9f9;
     height: 745px;
 
     &::after {
       background-size: auto 37px;
       height: 20px;
       background-repeat: repeat-x;
-      right: -12px;
+      background-position-x: 10px;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: url("../img/hero-desktop@2x.jpg") no-repeat;
+      background: url("../img/hero-tablet@2x.jpg") no-repeat;
       background-position: center 0;
-      background-color: #fafafa;
-      background-size: 2300px 1492px;
+      background-size: 1150px 746px;
+      background-color: #f9f9f9;
     }
   }
 
   .promo__wrapper {
     max-width: 1150px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     padding-left: 50px;
@@ -158,21 +204,13 @@
     min-width: 1050px;
   }
 
-  .promo__item {
+  .promo__title {
+    .font-size-height(53px; 57px);
+  }
+
+  .promo__link {
     padding-top: 28px;
     padding-bottom: 30px;
     padding-right: 330px;
-
-    &--toys {
-      background-position: 92% 55%;
-    }
-
-    &--interior {
-      background-position: 92% 54%;
-    }
-  }
-
-  .promo__title {
-    .font-size-height(53px; 57px);
   }
 }

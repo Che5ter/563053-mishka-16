@@ -6,6 +6,7 @@
 }
 
 .page-footer__wrapper {
+  width: 100%;
   max-width: 320px;
   margin: 0 auto;
   padding: 0 30px;
@@ -88,6 +89,11 @@
 
 .page-footer__logo-block {
   padding-left: 22px;
+  padding-top: 5px;
+}
+
+.page-footer__logo-block svg {
+  fill: #63d1bb;
 }
 
 @media (min-width: @tablet-width) {
@@ -110,6 +116,19 @@
     padding-bottom: 60px;
   }
 
+  .page-footer__link:hover svg {
+    fill: #46c1ae;
+  }
+
+  .page-footer__link:active svg {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+
+  .page-footer__link:active span {
+    opacity: 0.3;
+  }
+
   .footer-social {
     padding-top: 60px;
     padding-left: 119px;
@@ -123,8 +142,13 @@
 
   .page-footer__logo-block {
     margin-left: 16px;
-    padding-left: 23px;
-    padding-top: 33px;
+    padding-left: 32px;
+    padding-top: 38px;
+  }
+
+  .page-footer__logo-block svg {
+    width: 30px;
+    height: 34px;
   }
 }
 

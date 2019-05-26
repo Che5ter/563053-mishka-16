@@ -6,10 +6,11 @@
   &::after {
     position: absolute;
     content: "";
-    height: 18px;
+    height: 20px;
     width: 100%;
-    background: url("../img/bg-zigzag-line.svg") no-repeat;
-    background-size: 100% 6px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: 100% auto;
+    background-position-x: 0;
   }
 }
 
@@ -37,6 +38,9 @@
 .special-offer__title {
   padding-bottom: 6px;
   padding-top: 27px;
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .special-offer__icon {
@@ -64,6 +68,7 @@
 }
 
 .special-offer__description {
+  display: flex;
   margin-top: 2px;
   font-size: 15px;
   line-height: 20px;
@@ -80,7 +85,7 @@
 }
 
 .special-offer__key--right {
-  padding-left: 15px;
+  padding-left: 26px;
 }
 
 .special-offer__product-picture {
@@ -89,13 +94,12 @@
 
 @media (min-width: @tablet-width) {
   .special-offer::after {
-    position: absolute;
-    content: "";
-    height: 20px;
+    height: 40px;
     width: 100%;
-    bottom: -36px;
-    background: url("../img/bg-zigzag-line.svg") no-repeat;
-    background-size: 100% 20px;
+    bottom: -54px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: 100% 62%;
+    background-position-x: 17px;
   }
 
   .special-offer__wrapper {
@@ -130,6 +134,7 @@
   }
 
   .special-offer__description {
+    max-width: 290px;
     margin-top: 19px;
   }
 
@@ -157,10 +162,6 @@
     right: 50px;
   }
 
-  .special-offer__description td {
-    max-width: 5px;
-  }
-
   .special-offer__price {
     text-align: left;
     padding-top: 56px;
@@ -174,20 +175,18 @@
   }
 
   .special-offer__order {
+    width: 292px;
     margin-top: 34px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .special-offer::after {
-    position: absolute;
-    content: "";
-    height: 38px;
+    height: 55px;
     width: 100%;
-    background: url("../img/bg-zigzag-line.svg") no-repeat;
-    background-size: auto 21px;
-    background-repeat: repeat-x;
-    right: 28px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: auto 38%;
+    background-position-x: 27px;
   }
 
   .special-offer__wrapper {

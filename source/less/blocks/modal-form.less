@@ -1,0 +1,127 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 320px;
+  height: 336px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: @font-colorw;
+  border-top: 2px solid #c7c7c7;
+  border-bottom: 2px solid #c7c7c7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-form__title {
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  padding-left: 90px;
+  padding-right: 82px;
+  .font-size-height(25px; 30px);
+  text-transform: uppercase;
+}
+
+.modal-form__fiedset {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.modal-form__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.modal-form__item {
+  width: 82px;
+  height: 52px;
+  margin-right: 7px;
+  .font-size-height(17px; 16px);
+}
+
+.modal-form__item:last-child {
+  margin-right: 0;
+}
+
+.modal-form__select {
+  padding-bottom: 20px;
+  .font-size-height(15px; 30px);
+  font-weight: normal;
+  color: #444444;
+  text-align: center;
+}
+
+.modal-form__submit {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  padding-left: 82px;
+  padding-right: 82px;
+  background-color: #63d1bb;
+  border: none;
+  color: @font-colorw;
+  .font-size-height(17px; 16px);
+  font-weight: bold;
+}
+
+.modal-form__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #ececec;
+}
+
+.modal-form__label:hover {
+  border-color: #444444;
+}
+
+.modal-form__radio:checked + label {
+  border-color: #63d1bb;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-form {
+    width: 566px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-form__fiedset {
+    width: 350px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0;
+  }
+
+  .modal-form__item {
+    width: 112px;
+    height: 52px;
+  }
+
+  .modal-form__submit {
+    width: 350px;
+  }
+
+  .modal-form__title {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    margin-left: 110px;
+    .font-size-height(30px; 57px);
+  }
+
+  .modal-form__select {
+    font-size: 17px;
+  }
+}
